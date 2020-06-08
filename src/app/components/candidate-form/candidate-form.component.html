@@ -1,0 +1,48 @@
+<div class="tile is-child box">
+  <form (ngSubmit)="addCandidate()">
+    <div class="field">
+      <label class="label">Candidate's Name : </label>
+      <div class="control">
+        <input class="input "
+               type="text" placeholder="Name"
+               [(ngModel)]="candidateForm.name"
+               defaultValue=""
+               name="listName"
+        />
+      </div>
+      <p class="help">This is a help text</p>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Info</label>
+      </div>
+      <div class="field-body">
+        <div class="field"><input class="input" type="text" placeholder="Address" name="address"
+                                  [(ngModel)]="candidateForm.address">
+        </div>
+        <div class="field"><input class="input " type="text" placeholder="Phone" name="phone"
+                                  [(ngModel)]="candidateForm.phone">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Photo</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="PhotoUrl " name="photo" [(ngModel)]="candidateForm.photo">
+      </div>
+    </div>
+    <div class="field  ">
+      <p class="control">
+        <label class="label">Notes : </label>
+      </p>
+      <p class="control">
+        <textarea class="textarea" placeholder="Textarea" name="notes" [(ngModel)]="candidateForm.notes"></textarea>
+      </p>
+    </div>
+    <div class="control">
+      <button class="button is-primary">Submit</button>
+    </div>
+  </form>
+
+</div>
